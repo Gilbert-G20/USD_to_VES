@@ -1,3 +1,4 @@
 datetime
 fastapi
 selenium
+uvicorn
