@@ -33,7 +33,7 @@ def get_usd_ves_ratePL():
         # print(f"Valor extraído: {rate}")
         # -------------------------------
         
-        return rate
+        return {"rate": rate}
     
     except Exception as e:
         # -------------------------------
