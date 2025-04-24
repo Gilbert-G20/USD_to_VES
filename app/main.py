@@ -11,7 +11,7 @@ def get_rateBCV():
         "currency": "USD-BCV",
         "to": "VES",
         "rate": data.get("rate", "N/A"),
-        "updated_at": datetime.utcnow().isoformat()
+        "updated_at": datetime.datetime.utcnow().isoformat()
     }
 
 @app.get("/api/rate-parallel")
@@ -21,5 +21,5 @@ def get_ratePL():
         "currency": "USD-Parallel",
         "to": "VES",
         "rate": data.get("rate", "N/A"),
-        "updated_at": datetime.utcnow().isoformat()
+        "updated_at": datetime.datetime.utcnow().isoformat()
     }
