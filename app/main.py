@@ -1,7 +1,7 @@
 import datetime
 from fastapi import FastAPI
-from get_paralell import get_usd_ves_rateBCV
-from get_bcv import get_usd_ves_ratePL
+from app.get_paralell import get_usd_ves_rateBCV
+from app.get_bcv import get_usd_ves_ratePL
 app = FastAPI()
 
 @app.get("/api/rate")
