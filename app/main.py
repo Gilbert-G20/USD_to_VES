@@ -1,10 +1,10 @@
 import datetime
 from fastapi import FastAPI
-from app.get_paralell import get_usd_ves_rateBCV
-from app.get_bcv import get_usd_ves_ratePL
+from app.get_paralell import get_usd_ves_ratePL
+from app.get_bcv import get_usd_ves_rateBCV
 app = FastAPI()
 
-@app.get("/api/rate")
+@app.get("/api/rate-bcv")
 def get_rateBCV():  
     data = get_usd_ves_rateBCV()  
     return {
@@ -14,6 +14,7 @@ def get_rateBCV():
         "updated_at": datetime.utcnow().isoformat()
     }
 
+@app.get("/api/rate-parallel")
 def get_ratePL():  
     data = get_usd_ves_ratePL()  
     return {
