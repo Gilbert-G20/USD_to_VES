@@ -32,7 +32,7 @@ RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add
     rm -rf /var/lib/apt/lists/*
 
 # Copy the ChromeDriver binary
-COPY chromedriver /usr/local/bin/chromedriver
+COPY chromedriver-linux64/chromedriver-linux64/chromedriver /usr/local/bin/chromedriver
 RUN chmod +x /usr/local/bin/chromedriver
 
 # Copy the requirements file and install dependencies
